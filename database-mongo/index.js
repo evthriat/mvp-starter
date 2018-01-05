@@ -14,7 +14,7 @@ db.once('open', function() {
 
 var QuizSchema = mongoose.Schema( {
   Subject: String,
-  Questions: Array,
+  Questions: String,
   Answers: Array,
 
 } )
@@ -26,14 +26,14 @@ var Quiz = mongoose.model('Item', QuizSchema);
 
 let BeeQuiz = {
   Subject: 'Bees! bzzzzzzz',
-  Questions: ['How many bees are there in the world?',
-              'Are honeybees going extinct?',
-              'How many times can honeybees sting you?',
-              'Wasps are ...',
-              'How are bees from a hive related to each other?',
-              'What is Honey made from?',
-              'how many bees are in a hive?'
-              ],
+  Questions: JSON.stringify(['How many bees are there in the world?',
+                'Are honeybees going extinct?',
+                'How many times can honeybees sting you?',
+                'Wasps are ...',
+                'How are bees from a hive related to each other?',
+                'What is Honey made from?',
+                'how many bees are in a hive?'
+                ]),
   Answers: [{1:'one million', 2:'13.5 billion',3:'one trillion', 4: 'more thant those', 'answer': 4},
             {1:'one million', 2:'13.5 billion',3:'one trillion', 4: 'more thant those', 'answer': 4},
             {1:'one million', 2:'13.5 billion',3:'one trillion', 4: 'more thant those', 'answer': 4},

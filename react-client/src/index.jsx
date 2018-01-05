@@ -10,13 +10,23 @@ class App extends React.Component {
       items: [],
       title: '',
       questions: '',
-      answer1: '',
-      answer2: '',
-      answer3: '',
-      answer4: ''
+      testQuestion: ['How many bees are there in the world?',
+                'Are honeybees going extinct?',
+                'How many times can honeybees sting you?',
+                'Wasps are ...',
+                'How are bees from a hive related to each other?',
+                'What is Honey made from?',
+                'how many bees are in a hive?'
+                ],
+      testAnswers: [{1:'one million', 2:'13.5 billion',3:'one trillion', 4: 'more thant those', 'answer': 4},
+                    {1:'one million', 2:'13.5 billion',3:'one trillion', 4: 'more thant those', 'answer': 4},
+                    {1:'one million', 2:'13.5 billion',3:'one trillion', 4: 'more thant those', 'answer': 4},
+                    {1:'one million', 2:'13.5 billion',3:'one trillion', 4: 'more thant those', 'answer': 4},
+                    {1:'one million', 2:'13.5 billion',3:'one trillion', 4: 'more thant those', 'answer': 4},
+                    {1:'one million', 2:'13.5 billion',3:'one trillion', 4: 'more thant those', 'answer': 4}
+               ]
     }
   }
-
   componentDidMount() {
     $.ajax({
       contentType: 'application/json',
@@ -39,9 +49,7 @@ class App extends React.Component {
   render () {
     return (<div>
       <h1>{this.state.title}</h1>
-      <List questions={this.state.questions}/>
-      <h1 answers={this.state.answer1}></h1>
-      <List items={this.state.items}/>
+      <List questions={this.state.testQuestion}/>
     </div>)
   }
 }
