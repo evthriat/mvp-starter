@@ -9,8 +9,11 @@ class App extends React.Component {
     this.state = { 
       items: [],
       title: '',
-      questions: [],
-      answers: [],
+      questions: '',
+      answer1: '',
+      answer2: '',
+      answer3: '',
+      answer4: ''
     }
   }
 
@@ -23,8 +26,7 @@ class App extends React.Component {
         this.setState({
           items: data,
           title: data[0].Subject,
-          questions: data[0].Questions,
-          answers: data[0].Answers,
+          questions: [data[0].Questions],
         });
         console.log('this is the data: ', data[0])
       },
@@ -36,10 +38,9 @@ class App extends React.Component {
 
   render () {
     return (<div>
-      <h1 title={this.state.title}></h1>
-      <h1 questions={this.state.questions}></h1>
-      <h1 answers={this.state.answers}></h1>
-
+      <h1>{this.state.title}</h1>
+      <List questions={this.state.questions}/>
+      <h1 answers={this.state.answer1}></h1>
       <List items={this.state.items}/>
     </div>)
   }

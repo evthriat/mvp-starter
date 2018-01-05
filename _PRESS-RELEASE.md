@@ -17,28 +17,29 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > Basic Quiz
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > Anyone who wants to test themselves or test others on some subset of knoweldge.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > The user will select a quiz subject and will be given a random assortment of questions on that subject.  After the user makes a selection the correct answer will be revealed.  
+  Advanced features: find api to generate questions and answers
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > The quiz will allow people to test their knoweldge on subjects of their choosing.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > The quiz provides an individual with questions they arn't aready familiar with and allows 
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > This is going to be a quiz unlike any quizes made before it.
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Just go to the website, select the quiz and get going!
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > I know so much more now!
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > www.thebestquizever.com
