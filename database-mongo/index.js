@@ -43,23 +43,14 @@ let BeeQuiz = {
             ]
 }
 
-var insertDocuments = function(db, callback) {
-  // Get the documents collection
-  var collection = db.collection('documents');
-  // Insert some documents
-  collection.insertMany(BeeQuiz, function(err, result) {
-    assert.equal(err, null);
-    assert.equal(3, result.result.n);
-    assert.equal(3, result.ops.length);
-    console.log("Inserted 3 documents into the collection");
-    callback(result);
+
+Quiz.find({ Subject: /^Bees! bzzzzzzz/ }, function(exists){
+  var BeeData = new Quiz(BeeQuiz);
+  if(!exists) {
+    BeeData.save(function (err, BeeData) {
+    if (err) return console.error(err); 
   });
-}
-
-var BeeData = new Quiz(BeeQuiz);
-
-BeeData.save(function (err, BeeData) {
-  if (err) return console.error(err);
+  }
 });
 
 
